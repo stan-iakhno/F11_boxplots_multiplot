@@ -1,0 +1,15 @@
+library("ggplot2")
+# Have column names as text, otherwise prepend X
+
+as.factor(sla_jej_fon11$diet)
+g<-ggplot(sla_jej_fon11, aes(x=slz_jej_log, y=diet))
+
+g+geom_boxplot(fill="darkseagreen4")
+df<-fon11_MRS_All
+df$diet2 <-factor(df$diet, labels=c("bline", "ctrl", "yeast"))
+df$diet2
+pl01 <- ggplot(df,aes(x=sl_day,y=df$mrs_jej_log,color=diet2)) + 
+  geom_boxplot(width=0.45) + 
+  labs(y="logCFU / g JEJ2", x="day post weaning", title="Lactobacillus spp / distal jejunum")+
+  scale_color_manual(values=c("#999999", "#E69F03", "#70B4E9"))
+pl01  
