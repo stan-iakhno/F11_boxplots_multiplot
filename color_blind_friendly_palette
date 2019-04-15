@@ -1,0 +1,6 @@
++ scale_color_manual(values=c(         "#E69F00", 
+                                                            "#CC79A7",
+                                                            "#009E73",
+                                                            "#F0E442",
+                                                            "#0072B2",
+                                                            "#56B4E9")
